@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --ff-open: "Open Sans", sans-serif;
+  --ff-poppins: "Poppins", sans-serif;
+}
+
+.main {
+  background: var(--Violet) url("../images/bg-mobile.svg") no-repeat fixed;
+  background-size: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.logo {
+  width: 40%;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: var(--ff-poppins);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 3rem 0 1rem;
+}
+
+.text {
+  font-family: var(--ff-open);
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+button {
+  color: var(--Violet);
+  background-color: #fff;
+  padding: 0.7rem 5rem;
+  border-radius: 1.5rem;
+  border: 0;
+  margin: 1.5rem 0 4.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background-color: var(--Soft-Magenta);
+  color: #fff;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.icons a {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  color: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+}
+
+@media (min-width: 1100px) {
+  .main {
+    text-align: left;
+    position: relative;
+    background-image: url("../images/bg-desktop.svg");
+  }
+
+  .title {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 25%;
+  }
+
+  .container {
+    max-width: unset;
+    display: flex;
+  }
+
+  .right,
+  .left {
+    flex-basis: 50%;
+  }
+
+  .right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 4rem;
+    padding-right: 2rem;
+  }
+
+  .icons {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  button {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
